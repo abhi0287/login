@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+     input[type=text], input[type=password] {
+  width: 100%;
+    padding: 15px;
+
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+    .btn{
+      width:25%; 
+      background-color: dodgerblue;
+      border: none;
+      padding: 12px;
+      cursor: pointer;
+      float: left;
+    }
+    .btn:hover{
+      background-color:#cc00cc;
+
+
+    }
+    *{
+    box-sizing: border-box;
+  }
+    
+    input[type=text],input[type=password]{
+      border: 1px solid #a1a3a3;
+        border-radius: 4px;
+      box-shadow: 0 1px #fff;
+      box-sizing: border-box;
+      height: 39px;
+      margin: 31px 0 0 29px;
+      padding-left: 37px;
+      transition: box-shadow 0.3s;
+      width: 400px;
+
+    }
+    input[type=submit]{
+          width: 400px;
+          height: 35px;
+          display: block;
+          font-family: Arial, "Helvetica", sans-serif;
+          font-size: 16px;
+          font-weight: bold;
+          color: #fff;
+          text-decoration: none;
+          text-transform: uppercase;
+          text-align: center;
+          text-shadow: 1px 1px 0px #37a69b;
+          padding-top: 6px;
+          margin: 29px 0 0 29px;
+          position: relative;
+          cursor: pointer;
+          border: none;
+          background-color: #37a69b;
+   
+    }
+    .body{
+      position: relative;
+    }
+    
+    .main{
+      width:  700px;
+      height: 600px;
+      margin:auto;
+      background-color:   #bf4040 ;
+    }
+    form{
+      width: 500px;
+      margin: auto;
+            padding: 12px 24px;
+
+
+    }
+    
+
+  </style>
+</head>
+<body>
+    <div class="main">
+      <form name="MyForm" action="post" onsubmit="myValidation()">
+           <h1>Sign Up</h1>
+           <p>Please fill in this form to create an account.</p>
+            <hr>
+
+            <label for="Name"></label>
+            <input type="text" placeholder="Enter your First Name" name="fname">
+            <label for="Email"></label>
+            <input type="text" placeholder="Enter you mail" name="mail">
+
+            <label for="psw"></label>
+            <input type="password" placeholder="Enter Password" name="psw" >
+
+            <label for="psw-repeat"></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" >
+
+            
+
+              <input type="submit" name="submit"></button>
+        
+      </form>
+  </div> 
+  <script type="text/javascript">
+    function myValidation() {
+        var value=document.forms["MyForm"]["fname"].value;
+        var value1=document.forms["MyForm"]["mail"].value;
+        var value2=document.forms["MyForm"]["psw"].value;
+
+        var value3=document.forms["MyForm"]["psw-repeat"].value;
+
+        if (value=="") {
+          alert("Name cannot be empty");
+        } 
+        if (value1=="") {
+          alert("Email cannot be empty");
+        } 
+        if (value2=="") {
+          alert("password cannot be empty");
+        }
+        if (value3=="") {
+          alert("confirm your password");
+        }  // body...
+    }
+
+</body>
+</html>

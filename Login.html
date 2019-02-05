@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log In</title>
+	<style type="text/css">
+	*{
+		box-sizing: border-box;
+	}
+		
+		input[type=text],input[type=password]{
+			border: 1px solid #a1a3a3;
+		  	border-radius: 4px;
+			box-shadow: 0 1px #fff;
+			box-sizing: border-box;
+			height: 39px;
+			margin: 31px 0 0 29px;
+			padding-left: 37px;
+			transition: box-shadow 0.3s;
+			width: 300px;
+
+		}
+		input[type=submit]{
+			    width: 300px;
+			    height: 35px;
+			    display: block;
+			    font-family: Arial, "Helvetica", sans-serif;
+			    font-size: 16px;
+			    font-weight: bold;
+			    color: #fff;
+			    text-decoration: none;
+			    text-transform: uppercase;
+			    text-align: center;
+			    text-shadow: 1px 1px 0px #37a69b;
+			    padding-top: 6px;
+			    margin: 29px 0 0 29px;
+			    position: relative;
+			    cursor: pointer;
+			    border: none;
+			    background-color: #37a69b;
+   
+		}
+		.body{
+			position: relative;
+		}
+		
+		.main{
+			width: 400px;
+			height: 300px;
+			margin:auto;
+			background-color:   #bf4040	;
+		}
+		form{
+			width: 500px;
+			margin: auto;
+						padding: 20px;
+
+
+		}
+		.forgot {
+				  color: dodgerblue;
+				  display: inline-block;
+				  float: right;
+				  position: relative;
+				  right: 255px;
+				  text-decoration: none;
+				  top: 5px;
+				  text-decoration-line: underline;
+				}
+.forgot:hover { color: #3b3b3b }
+
+
+		
+
+	</style>
+</head>
+<body>
+	<div class="main">
+		<form name="MyForm" class="container" onsubmit="myValidation()">
+			<label for="uname"></label>	
+			    <input type="text" placeholder="Enter Username" name="uname"  >
+			    <label for="password"></label>
+			    <input type="password" placeholder="Enter Password" name="pass" >
+			    <input type="submit" name="login">
+			      <a href="#" class="forgot">forgot password?</a>
+
+		
+
+	</form>
+
+	</div>
+
+		<script type="text/javascript">
+		function myValidation() {
+				var value=document.forms["MyForm"]["uname"].value;
+				var value1=document.forms["MyForm"]["pass"].value;
+				if (value=="") {
+					alert("Name cannot be empty");
+				}	
+				if (value1=="") {
+					alert("password cannot be empty");
+				}		// body...
+		}
+
+	</script>
+
+</body>
+</html>
